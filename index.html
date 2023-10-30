@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Javascript Simple Calculator</title>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="calculator">
+            <div class="result">
+                <input type="text"  placeholder="0" class="display"  disabled>
+            </div>
+            <form>
+               
+                <div class="number_calc">
+                    <div class="operator">
+                        <input type="button" value="7" onclick="document.querySelector('.display').value +='7'" >
+                        <input type="button" value="8" onclick="document.querySelector('.display').value +='8'" >
+                        <input type="button" value="9" onclick="document.querySelector('.display').value +='9'" >
+                        <input type="button" class="del_btn" value="DEL" onclick="document.querySelector('.display').value = document.querySelector('.display').value.toString().slice(0,-1)" >
+                    </div>
+                    <div class="operator">
+                        <input type="button" value="4" onclick="document.querySelector('.display').value +='4'" >
+                        <input type="button" value="5" onclick="document.querySelector('.display').value +='5'" >
+                        <input type="button" value="6" onclick="document.querySelector('.display').value += '6'" >
+                        <input type="button" value="+" onclick="document.querySelector('.display').value +='+'" >
+                    </div>
+                    <div class="operator">
+                        <input type="button" value="1" onclick="document.querySelector('.display').value +='1'" >
+                        <input type="button" value="2" onclick="document.querySelector('.display').value +='2'" >
+                        <input type="button" value="3" onclick="document.querySelector('.display').value +='3'" >
+                        <input type="button" value="-" onclick="document.querySelector('.display').value +='-'" >
+                    </div>
+                    <div class="operator">
+                        <input type="button" value="." onclick="document.querySelector(' .display').value +='.'" >
+                        <!-- <input type="button" value="00" onclick="document.querySelector('.display').value +='00'"> -->
+                        <input type="button" value="0" onclick="document.querySelector('.display').value +='0'" >
+                        <input type="button" value="/" onclick="document.querySelector('.display').value += '/'" >
+                        <input type="button" value="x" onclick="document.querySelector('.display').value +='*'" >
+                    </div>
+                    <div class="operator">
+                        <input type="button" value="Reset" class="reset_btn" onclick=" document.querySelector('.display').value = ''" >
+
+                        <input type="button" value="=" class="equal" onclick="ucheck()" >
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
