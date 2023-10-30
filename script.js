@@ -8,5 +8,9 @@ function ucheck() {
      
 }
 
-const inputField = document.querySelector('.result input');
+const inputField = document.querySelector('.result');
+
+function spaceRemover() {
+    inputField.classList.add('open')
+}
 
